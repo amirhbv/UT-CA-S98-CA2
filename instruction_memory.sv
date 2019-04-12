@@ -1,3 +1,4 @@
+`timescale 1ns / 1ns
 module Inst_memory(
 	input [9 :0] address,
 	output[15:0] inst

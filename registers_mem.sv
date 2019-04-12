@@ -1,3 +1,4 @@
+`timescale 1ns / 1ns
 module Reg_memory(
 	input clk,
 	input rst,
@@ -34,6 +35,5 @@ module Reg_memory(
 				2'b10:mem[    R_i + 4] <= write_data ;
 				2'b11:mem[(R_i + 6)%8] <= write_data ;
 			endcase
-		end
 	end
 endmodule

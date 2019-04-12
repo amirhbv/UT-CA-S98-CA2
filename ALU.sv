@@ -1,3 +1,4 @@
+`timescale 1ns / 1ns
 module ALU(
 	input [15:0] data_i , data_j ,
 	input [6:0] aluOp ,
