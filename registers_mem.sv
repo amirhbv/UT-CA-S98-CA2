@@ -26,7 +26,7 @@ module Reg_memory(
 	always @(negedge clk , posedge rst) begin
 		if(rst) begin
 			for (integer i = 0 ; i < 8 ; i = i + 1)
-			mem[i] <= 16'd0;
+				mem[i] <= 16'd0;
 		end
 		else if (toWrite)
 			case(window)
