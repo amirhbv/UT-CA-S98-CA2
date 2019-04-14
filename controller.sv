@@ -40,10 +40,10 @@ module Controller(
 			end
 
 			4'b1000: begin
-				ALUop <= func ;
+				ALUop <= func[6:0] ;
 				setWindow <= func[7] ;
 				if ( func[7:6] == 2'b00 )
-				toWrite <= 1'b1 ;
+					toWrite <= 1'b1 ;
 			end
 
 			4'b1100: begin
