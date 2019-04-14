@@ -15,8 +15,9 @@ module Memory(
 	end
 	assign read_data = mem[address] ;
 	initial begin
-		// for (integer i = 0 ; i < 1024 ; i = i + 1)
-		// 	mem[i] <= 16'd0 ;
+	  
+		for (integer i = 0 ; i < 1024 ; i = i + 1)
+		  mem[i] = 16'd0 ;
 
 		mem[500] = 1;
 		mem[501] = 2;
