@@ -53,7 +53,7 @@ module Datapath(
 		.pc_cur(PC_out)
 	);
 
-	assign PC_first = equalForBranch ? inst_out[7:0] : PC_out + 2 ;
+	assign PC_first = equalForBranch ? inst_out[7:0] : PC_out + 1 ;
 	assign PC_in    = jump ? inst_out[9:0] : PC_first ;
 
 	Inst_memory inst_mem(
@@ -74,4 +74,6 @@ module Datapath(
 		.data_j(data_j)
 	);
 	assign write_data = memOrALU ? ALUout : read_data ;
+	assign opcode = inst_out[15:12] ;
+	assign func   = inst_out[7:0] ;
 endmodule

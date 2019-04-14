@@ -5,7 +5,7 @@ module TB();
 	always #100 clk = ~clk;
 	initial begin
 		rst = 1;
-		#1000;
+		#200;
 		rst = 0;
 		#5000;
 		$stop;
