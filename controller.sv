@@ -18,7 +18,7 @@ module Controller(
 		jump <= 1'b0 ;
 		mem_write <= 1'b0 ;
 		immdSel <= 1'b0 ;
-		memOrALU <= 1'b0 ;
+		memOrALU <= 1'b1 ;
 		toWrite <= 1'b0 ;
 		ALUop <= 7'd0 ;
 		case(opcode)
