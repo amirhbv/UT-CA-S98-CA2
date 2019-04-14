@@ -6,7 +6,7 @@ module Inst_memory(
 	reg [15:0] mem[0:1023] ;
 	initial begin
 		for (integer i = 0 ; i < 1024 ; i = i + 1)
-			mem[i] <= {4'b1110, 2'b01, 2'b01, 8'b01000000 } ;
+			mem[i] <= {4'b1000, 2'b00, 2'b00, 8'b01000000 } ;
 
 		mem[0]  <= {4'b1110, 2'b01, 2'b01, 8'b00000000  }; 	// ANDI R1, R1, 0
 
