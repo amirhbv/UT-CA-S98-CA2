@@ -13,6 +13,11 @@ module Reg_memory(
 );
 	reg[1 :0] window ;
 	reg[15:0] mem[0:7] ;
+	initial begin
+	  window <= 2'b0 ;
+		for (integer i = 0 ; i < 8 ; i = i + 1)
+			mem[i] <= 16'd0 ;
+	end
 	always @(*) begin
 		if ( setWindow )
 			window <= wnd ;
